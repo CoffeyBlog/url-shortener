@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>URL Shortner</h1>
+
+{% for message in get_flashed_messages() %}
+    <h2>  {{ message }} </h2>
+{% endfor %}
+
+<form action="your-url" method="post">
+    <label for="url"> Website URL</label>
+    <input type="url" name="url" value="">
+    <br>
+    <label for="code">Short Code</label>
+    <input type="text" name="code" value>
+    <br>
+
+    <input type="submit" value="shorten">
+</form>
+
+
+<form action="your-url" method="post" enctype="multipart/form-data">
+    <label for="file"> File </label>
+    <input type="file" name="file" value="">
+    <br>
+    <label for="code">Short Code</label>
+    <input type="text" name="code" value>
+    <br>
+
+    <input type="submit" value="shorten">
+</form>
+
+
+</body>
+</html>
