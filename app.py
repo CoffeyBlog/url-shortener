@@ -61,3 +61,6 @@ def redirect_to_url(code):
                     return redirect(urls[code]['url'])
 
 
+
+if __name__ == "__main__":
+    app.run()
